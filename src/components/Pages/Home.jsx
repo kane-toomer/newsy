@@ -1,6 +1,7 @@
 import React from "react";
 import BigHeadline from "../Reusables/BigHeadline";
 import NewsStoryGrid from "../Reusables/NewsStoryGrid";
+import SubHeadlines from "../Reusables/SubHeadlines";
 
 const HomePage = () => {
 	return (
@@ -18,7 +19,7 @@ const HomePage = () => {
 				<NewsStoryGrid />
 
 				{/* Sub Headlines */}
-				<div className="h-64 rounded-lg border-4 border-dashed border-gray-200" />
+				<SubHeadlines />
 			</div>
 		</main>
 	);

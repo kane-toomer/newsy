@@ -67,57 +67,44 @@ const articles = [
 		imageAlt:
 			"Tall slender porcelain bottle with natural clay textured body and cork stopper.",
 	},
-	{
-		id: 7,
-		title: "donec enim diam vulputate ut pharetra sit amet aliquam id",
-		href: "#",
-		author: "Kane Toomer",
-		date: "1.24.24",
-		imageSrc:
-			"https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
-		imageAlt:
-			"Tall slender porcelain bottle with natural clay textured body and cork stopper.",
-	},
-	{
-		id: 8,
-		title: "donec enim diam vulputate ut pharetra sit amet aliquam id",
-		href: "#",
-		author: "Kane Toomer",
-		date: "1.24.24",
-		imageSrc:
-			"https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg",
-		imageAlt:
-			"Tall slender porcelain bottle with natural clay textured body and cork stopper.",
-	},
 ];
 
-const NewsStoryGrid = () => {
+const SubHeadlines = () => {
 	return (
-		<div className="px-4 py-20 md:mt-10 sm:px-0">
-			<h2 className="sr-only">Articles</h2>
+		<>
+			<div className="px-4 md:py-10 md:mt-10 lg:mt-0 xl:mt-0 sm:px-0">
+				<div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-6 py-5 border-t-2">
+					{articles.map((article) => (
+						<a href="#" key={article.id} className="flex py-6 hover:opacity-75">
+							<div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+								<img
+									src={article.imageSrc}
+									alt={article.imageAlt}
+									className="h-full w-full object-cover object-center"
+								/>
+							</div>
 
-			<div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-				{articles.map((article) => (
-					<a key={article.id} href={article.href} className="group mb-12">
-						<div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
-							<img
-								src={article.imageSrc}
-								alt={article.imageAlt}
-								className="h-full w-full object-cover object-center group-hover:opacity-75"
-							/>
-						</div>
-						<p className="mt-4 text-md font-medium text-gray-900">
-							{article.title}
-						</p>
-						<div className="flex justify-between items-center text-gray-500 font-medium text-xs mt-2">
-							<p>by {article.author}</p>
-							<p className="mr-5">{article.date}</p>
-						</div>
-					</a>
-				))}
+							<div className="ml-4 flex flex-1 flex-col">
+								<div>
+									<div className="flex justify-between text-base font-medium text-gray-900">
+										<h3>
+											<a href={article.href}>{article.title}</a>
+										</h3>
+										<p className="ml-4">{article.price}</p>
+									</div>
+									<p className="mt-1 text-sm text-gray-500">{article.color}</p>
+								</div>
+								<div className="mt-1 text-gray-500 font-medium text-xs">
+									<p className="mt-2">by {article.author}</p>
+									<p>{article.date}</p>
+								</div>
+							</div>
+						</a>
+					))}
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
-export default NewsStoryGrid;
+export default SubHeadlines;

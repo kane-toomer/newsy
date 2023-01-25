@@ -9,6 +9,8 @@ import SearchBar from "./SearchBar";
 const navigation = [
 	{ name: "Business", href: "#", current: false },
 	{ name: "Entertainment", href: "#", current: false },
+	{ name: "International", href: "#", current: false },
+	{ name: "Opinion", href: "#", current: false },
 	{ name: "Politics", href: "#", current: false },
 	{ name: "Sports", href: "#", current: false },
 	{ name: "Technology", href: "#", current: false },
@@ -32,7 +34,7 @@ const Navigation = () => {
 											<h3 className="text-white text-3xl font-bold">Newsy</h3>
 										</div>
 										<div className="flex items-center">
-											<div className="hidden md:block">
+											<div className="hidden lg:block">
 												<div className="ml-10 flex items-baseline space-x-4">
 													{navigation.map((item) => (
 														<a
@@ -58,24 +60,24 @@ const Navigation = () => {
 											<button
 												type="button"
 												className="rounded-md p-2 text-white hover:bg-blue-800 focus:outline-none">
-												<span className="sr-only">View notifications</span>
+												<span className="sr-only">Sign In / Register</span>
 												<p className="font-medium">Sign In / Register</p>
 											</button>
 										</div>
 									</div>
 
-									<div className="hidden md:block lg:hidden">
+									{/* <div className="hidden md:block lg:hidden">
 										<div className=" flex items-center ">
 											<button
 												type="button"
 												className="rounded-md p-2 text-white hover:bg-blue-800  focus:outline-none">
-												<span className="sr-only">View notifications</span>
+												<span className="sr-only">Sign In/Register Icon</span>
 												<ArrowLeftOnRectangleIcon className="block h-6 w-6" />
 											</button>
 										</div>
-									</div>
+									</div> */}
 
-									<div className="-mr-2 flex md:hidden">
+									<div className="-mr-2 flex lg:hidden">
 										{/* Mobile menu button */}
 										<Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-blue-800 hover:text-white focus:outline-none">
 											<span className="sr-only">Open main menu</span>
@@ -95,7 +97,7 @@ const Navigation = () => {
 								</div>
 							</div>
 
-							<Disclosure.Panel className="md:hidden">
+							<Disclosure.Panel className="lg:hidden">
 								<div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
 									{navigation.map((item) => (
 										<Disclosure.Button
