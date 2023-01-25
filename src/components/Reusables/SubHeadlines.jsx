@@ -94,8 +94,8 @@ const SubHeadlines = () => {
 									</div>
 									<p className="mt-1 text-sm text-gray-500">{article.color}</p>
 								</div>
-								<div className="mt-1 text-gray-500 font-medium text-xs">
-									<p className="mt-2">by {article.author}</p>
+								<div className="flex justify-between items-center mt-5 text-gray-500 font-medium text-xs">
+									<p>by {article.author}</p>
 									<p>{article.date}</p>
 								</div>
 							</div>

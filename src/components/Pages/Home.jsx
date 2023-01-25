@@ -12,10 +12,10 @@ const HomePage = () => {
 					Latest Headlines
 				</p>
 
-				{/* Big Headline - 1 */}
+				{/* Big Headline */}
 				<BigHeadline />
 
-				{/* News Story Grid - 1 */}
+				{/* News Story Grid */}
 				<NewsStoryGrid />
 
 				{/* Sub Headlines */}

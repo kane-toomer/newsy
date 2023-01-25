@@ -14,6 +14,7 @@ const Footer = () => {
 							<h3 className="text-white text-3xl font-bold mb-3">Newsy</h3>
 							<p className="text-gray-400">Created by Kane Toomer</p>
 						</div>
+						{/* Company Column */}
 						<div>
 							<h2 className="mb-6 text-sm font-semibold uppercase ">Company</h2>
 							<ul className="text-gray-500 dark:text-gray-400">
@@ -39,6 +40,8 @@ const Footer = () => {
 								</li>
 							</ul>
 						</div>
+
+						{/* Help Center Column */}
 						<div>
 							<h2 className="mb-6 text-sm font-semibold uppercase">
 								Help center
@@ -66,6 +69,8 @@ const Footer = () => {
 								</li>
 							</ul>
 						</div>
+
+						{/* Legal Column */}
 						<div>
 							<h2 className="mb-6 text-sm font-semibold uppercase">Legal</h2>
 							<ul className="text-gray-500 dark:text-gray-400">
@@ -87,7 +92,9 @@ const Footer = () => {
 							</ul>
 						</div>
 					</div>
-					<div className="px-4 py-6 bg-blue-700 md:flex md:items-center md:justify-between rounded-md">
+
+					{/* Copyright & Social Icons */}
+					<div className="px-4 py-6 md:flex md:items-center md:justify-between rounded-md">
 						<span className="text-sm sm:text-center">
 							© 2023 <a href="https://kanetoomer.com/">Newsy™</a>. All Rights
 							Reserved.
