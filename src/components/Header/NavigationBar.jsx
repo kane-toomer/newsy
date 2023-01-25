@@ -3,11 +3,10 @@ import {
 	ArrowLeftOnRectangleIcon,
 	Bars3Icon,
 	XMarkIcon,
-	MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
+import SearchBar from "./SearchBar";
 
 const navigation = [
-	{ name: "Home", href: "#", current: true },
 	{ name: "Business", href: "#", current: false },
 	{ name: "Entertainment", href: "#", current: false },
 	{ name: "Politics", href: "#", current: false },
@@ -41,8 +40,8 @@ const Navigation = () => {
 															href={item.href}
 															className={classNames(
 																item.current
-																	? "bg-blue-900 text-white"
-																	: "text-gray-300 hover:bg-blue-800 hover:text-white",
+																	? "text-white"
+																	: "text-gray-200 hover:bg-blue-800 hover:text-white",
 																"px-3 py-2 rounded-md text-sm font-medium"
 															)}
 															aria-current={item.current ? "page" : undefined}>
@@ -58,7 +57,7 @@ const Navigation = () => {
 										<div className="ml-4 flex items-center md:ml-6">
 											<button
 												type="button"
-												className="rounded-md p-2 text-white hover:bg-blue-800  focus:outline-none">
+												className="rounded-md p-2 text-white hover:bg-blue-800 focus:outline-none">
 												<span className="sr-only">View notifications</span>
 												<p className="font-medium">Sign In / Register</p>
 											</button>
@@ -105,8 +104,8 @@ const Navigation = () => {
 											href={item.href}
 											className={classNames(
 												item.current
-													? "bg-blue-900 text-white"
-													: "text-gray-300 hover:bg-blue-800 hover:text-white",
+													? "text-white"
+													: "text-gray-200 hover:bg-blue-800 hover:text-white",
 												"block px-3 py-2 rounded-md text-base font-medium"
 											)}
 											aria-current={item.current ? "page" : undefined}>
@@ -114,10 +113,10 @@ const Navigation = () => {
 										</Disclosure.Button>
 									))}
 								</div>
-								<div className="border-t border-gray-300 mx-3 pt-4 pb-3">
+								<div className="border-t border-gray-300 mx-3 py-5">
 									<button
 										type="button"
-										className="rounded-full ml-1 p-1 text-white hover:text-white focus:outline-none">
+										className="ml-1 p-1 text-white hover:underline focus:outline-none">
 										<span className="sr-only">Toggle Theme</span>
 										<p className="font-medium">Sign In / Register</p>
 									</button>
@@ -127,23 +126,7 @@ const Navigation = () => {
 					)}
 				</Disclosure>
 
-				<header className="bg-white shadow">
-					<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-						<div className="flex items-center">
-							<MagnifyingGlassIcon
-								className="h-5 w-5 mr-4 text-gray-600"
-								aria-hidden="true"
-							/>
-							<input
-								type="text"
-								name="company-website"
-								id="company-website"
-								className="block w-full h-16 flex-1 rounded-none rounded-r-md border-gray-300 sm:text-sm focus:outline-none"
-								placeholder="Search Newsy"
-							/>
-						</div>
-					</div>
-				</header>
+				<SearchBar />
 			</div>
 		</>
 	);
