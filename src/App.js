@@ -4,6 +4,7 @@ import Home from "./components/Pages/Home";
 import ArticlePressed from "./components/Pages/ArticlePressed";
 import SignIn from "./components/Authentication/SignIn";
 import AuthSelection from "./components/Authentication/AuthSelection";
+import Register from "./components/Authentication/Register";
 
 function App() {
 	return (
@@ -11,7 +12,7 @@ function App() {
 			{/* <Navigation />
 			<ArticlePressed />
 			<Footer /> */}
-			<SignIn />
+			<AuthSelection />
 		</>
 	);
 }

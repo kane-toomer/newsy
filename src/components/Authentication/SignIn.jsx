@@ -1,14 +1,16 @@
 import React from "react";
 import background from "../../assets/Images/authBG.jpg";
+import { LockClosedIcon } from "@heroicons/react/20/solid";
 
 const SignIn = () => {
 	return (
 		<>
-			<div className="relative min-h-screen grid bg-black ">
+			<div className="relative min-h-screen grid bg-white ">
 				<div className="flex flex-col sm:flex-row items-center sm:justify-center flex-auto min-w-0 ">
 					<div
-						className="relative sm:w-1/2 xl:w-3/5 bg-black h-full hidden lg:flex flex-auto items-center justify-center p-10 overflow-hidden text-white bg-no-repeat bg-cover relative"
-						style={{ backgroundImage: `url(${background})` }}>
+						className="relative sm:w-1/2 xl:w-3/5 bg-blue-700 h-full hidden lg:flex flex-auto items-center justify-center p-10 overflow-hidden text-white bg-no-repeat bg-cover relative"
+						// style={{ backgroundImage: `url(${background})` }}
+					>
 						<div className="absolute bg-black  opacity-25 inset-0 z-0"></div>
 						<div className="w-full  lg:max-w-2xl md:max-w-md z-10 items-center text-center ">
 							<div className=" font-bold leading-tight mb-6 mx-auto w-full content-center items-center ">
@@ -19,23 +21,70 @@ const SignIn = () => {
 					<div className=" w-full sm:w-auto md:h-full xl:w-1/2 p-8 md:p-10 lg:p-14 sm:rounded-lg md:rounded-none ">
 						<div className="max-w-xl w-full space-y-12">
 							<div className="lg:text-left text-center">
-								<p className="mt-6 font-bold text-2xl text-white">Newsy</p>
-								<h2 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-bold text-gray-100">
+								<p className="mt-6 font-bold text-2xl text-gray-900">Newsy</p>
+								<h2 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900">
 									Welcome back!
 								</h2>
-								<p className="mt-10 text-3xl text-gray-200">
+								<p className="mt-10 text-2xl text-gray-600">
 									Sign in to continue.
 								</p>
 							</div>
-							<div className="flex flex-row justify-center items-center space-x-3"></div>
 
-							<div>
-								<button
-									type="submit"
-									className="lg:w-3/5 w-full flex justify-center text-gray-100 p-4 rounded-md tracking-wide font-bold focus:outline-none focus:shadow-outline hover:bg-blue-900 shadow-lg bg-blue-700 cursor-pointer transition ease-in duration-300">
-									Sign In
-								</button>
-							</div>
+							<form className="mt-8 space-y-10" action="#" method="POST">
+								<input type="hidden" name="remember" defaultValue="true" />
+								<div className="-space-y-px rounded-md shadow-sm">
+									<div>
+										<label htmlFor="email-address" className="sr-only">
+											Email address
+										</label>
+										<input
+											id="email-address"
+											name="email"
+											type="email"
+											autoComplete="email"
+											required
+											className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:outline-none sm:text-sm"
+											placeholder="Email address"
+										/>
+									</div>
+									<div>
+										<label htmlFor="password" className="sr-only">
+											Password
+										</label>
+										<input
+											id="password"
+											name="password"
+											type="password"
+											autoComplete="current-password"
+											required
+											className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:outline-none sm:text-sm"
+											placeholder="Password"
+										/>
+									</div>
+								</div>
+
+								<div className="flex justify-end mt-10">
+									<a
+										href="#"
+										className="font-medium text-sm text-blue-700 hover:underline">
+										Forgot your password?
+									</a>
+								</div>
+
+								<div>
+									<button
+										type="submit"
+										className="group relative flex w-full justify-center rounded-md border border-transparent bg-blue-700 py-2 px-4 text-sm font-medium text-white hover:bg-blue-900 focus:outline-none">
+										<span className="absolute inset-y-0 left-0 flex items-center pl-3">
+											<LockClosedIcon
+												className="h-5 w-5 text-blue-400"
+												aria-hidden="true"
+											/>
+										</span>
+										Sign In
+									</button>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
