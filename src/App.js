@@ -6,15 +6,10 @@ import SignIn from "./components/Authentication/SignIn";
 import AuthSelection from "./components/Authentication/AuthSelection";
 import Register from "./components/Authentication/Register";
 
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 function App() {
-	return (
-		<>
-			{/* <Navigation />
-			<ArticlePressed />
-			<Footer /> */}
-			<AuthSelection />
-		</>
-	);
+	return <></>;
 }
 
 export default App;

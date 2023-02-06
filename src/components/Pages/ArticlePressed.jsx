@@ -9,12 +9,20 @@ const ArticlePressed = () => {
 	return (
 		<main>
 			<div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-				{/* Back Button */}
-				<div className="mb-10 ml-5 sm:ml-0">
-					<button className="flex items-center text-blue-600">
-						<FontAwesomeIcon icon={faChevronLeft} />
-						<p className="font-medium ml-2 hover:underline">Back</p>
-					</button>
+				{/* Actions */}
+				<div className="mb-10 mx-5 sm:mx-0">
+					<div className="flex justify-between items-center">
+						{/* Back Button */}
+						<button className="flex items-center text-blue-600">
+							<FontAwesomeIcon icon={faChevronLeft} />
+							<p className="font-medium ml-2 hover:underline">Back</p>
+						</button>
+
+						{/* Save Button - Inactive */}
+						<button className="text-blue-600 px-3 py-2 rounded-md border-2 border-blue-600 hover:bg-blue-600 hover:text-white">
+							<p>Save</p>
+						</button>
+					</div>
 				</div>
 
 				{/* Article Title */}
