@@ -1,3 +1,5 @@
+import React, { Fragment } from "react";
+import { Outlet, Link } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
 import {
 	ArrowLeftOnRectangleIcon,
@@ -7,13 +9,13 @@ import {
 import SearchBar from "./SearchBar";
 
 const navigation = [
-	{ name: "Business", href: "#", current: false },
-	{ name: "Entertainment", href: "#", current: false },
-	{ name: "International", href: "#", current: false },
-	{ name: "Opinion", href: "#", current: false },
-	{ name: "Politics", href: "#", current: false },
-	{ name: "Sports", href: "#", current: false },
-	{ name: "Technology", href: "#", current: false },
+	{ name: "Business", href: "/business", current: false },
+	{ name: "Entertainment", href: "/entertainment", current: false },
+	{ name: "International", href: "/international", current: false },
+	{ name: "Opinion", href: "/opinion", current: false },
+	{ name: "Politics", href: "/politics", current: false },
+	{ name: "Sports", href: "/sports", current: false },
+	{ name: "Technology", href: "/technology", current: false },
 ];
 
 function classNames(...classes) {
@@ -22,7 +24,7 @@ function classNames(...classes) {
 
 const Navigation = () => {
 	return (
-		<>
+		<Fragment>
 			<div className="min-h-full">
 				<Disclosure as="nav" className="bg-blue-700">
 					{({ open }) => (
@@ -31,7 +33,9 @@ const Navigation = () => {
 								<div className="flex h-16 items-center justify-between">
 									<div className="flex items-center">
 										<div className="flex-shrink-0">
-											<h3 className="text-white text-3xl font-bold">Newsy</h3>
+											<a href="/" className="text-white text-3xl font-bold">
+												Newsy
+											</a>
 										</div>
 										<div className="flex items-center">
 											<div className="hidden lg:block">
@@ -57,12 +61,13 @@ const Navigation = () => {
 
 									<div className="hidden lg:block">
 										<div className="ml-4 flex items-center md:ml-6">
-											<button
+											<Link
 												type="button"
-												className="rounded-md p-2 text-white hover:bg-blue-800 focus:outline-none">
+												className="rounded-md p-2 text-white hover:bg-blue-800 focus:outline-none"
+												to={"/auth"}>
 												<span className="sr-only">Sign In / Register</span>
 												<p className="font-medium">Sign In / Register</p>
-											</button>
+											</Link>
 										</div>
 									</div>
 
@@ -116,12 +121,13 @@ const Navigation = () => {
 									))}
 								</div>
 								<div className="border-t border-gray-300 mx-3 py-5">
-									<button
+									<Link
+										to={"/auth"}
 										type="button"
 										className="ml-1 p-1 text-white hover:underline focus:outline-none">
 										<span className="sr-only">Toggle Theme</span>
 										<p className="font-medium">Sign In / Register</p>
-									</button>
+									</Link>
 								</div>
 							</Disclosure.Panel>
 						</>
@@ -129,8 +135,9 @@ const Navigation = () => {
 				</Disclosure>
 
 				<SearchBar />
+				<Outlet />
 			</div>
-		</>
+		</Fragment>
 	);
 };
 

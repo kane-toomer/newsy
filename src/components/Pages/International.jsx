@@ -1,16 +1,15 @@
 import React from "react";
-import Footer from "../Footer/Footer";
 import BigHeadline from "../Reusables/BigHeadline";
 import NewsStoryGrid from "../Reusables/NewsStoryGrid";
-import SubHeadlines from "../Reusables/SubHeadlines";
+import Footer from "../Footer/Footer";
 
-const HomePage = () => {
+const International = () => {
 	return (
 		<main>
 			<div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
 				{/* Page Title */}
 				<p className="font-bold text-4xl mt-5 mb-10 ml-3 sm:ml-0">
-					Latest Headlines
+					International
 				</p>
 
 				{/* Big Headline */}
@@ -19,9 +18,6 @@ const HomePage = () => {
 				{/* News Story Grid */}
 				<NewsStoryGrid />
 
-				{/* Sub Headlines */}
-				<SubHeadlines />
-
 				{/* Footer */}
 				<Footer />
 			</div>
@@ -29,4 +25,4 @@ const HomePage = () => {
 	);
 };
 
-export default HomePage;
+export default International;

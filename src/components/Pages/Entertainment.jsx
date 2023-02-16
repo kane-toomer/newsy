@@ -1,4 +1,7 @@
 import React from "react";
+import BigHeadline from "../Reusables/BigHeadline";
+import NewsStoryGrid from "../Reusables/NewsStoryGrid";
+import Footer from "../Footer/Footer";
 
 const Entertainment = () => {
 	return (
@@ -14,6 +17,9 @@ const Entertainment = () => {
 
 				{/* News Story Grid */}
 				<NewsStoryGrid />
+
+				{/* Footer */}
+				<Footer />
 			</div>
 		</main>
 	);
